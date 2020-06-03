@@ -19,6 +19,11 @@ footer {
 		 		filter: invert(1);
 		 		width: 50px;
 		 		margin: 15px;
+
+		 		&:hover {
+		 			content: '';
+		 			opacity: .7;
+		 		}
 		 	}
 		 }
 	}

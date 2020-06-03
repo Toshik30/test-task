@@ -3,14 +3,40 @@
 	<head>
 		<meta itemprop="inLanguage" content="ru" charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title itemprop="name">Шопен</title>
+		<title>Шопен</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	</head>
 	<body>
 		<%= _.template(require('./includes/header.html').default)(data) %>
 		<%= _.template(require('./includes/home-page.html').default)(data) %>
 		<%= _.template(require('./includes/footer.html').default)(data) %>
+		<button class="go-up" id="go-up">1</button>
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		<script>
+			$(function(){
+			  $.fn.scrollToTop=function(){
+			    $(this).hide().removeAttr("href");
+			    if($(window).scrollTop()!="0"){
+			        $(this).fadeIn("slow")
+			  }
+			  var scrollDiv=$(this);
+			  $(window).scroll(function(){
+			    if($(window).scrollTop()=="0"){
+			    $(scrollDiv).fadeOut("slow")
+			    }else{
+			    $(scrollDiv).fadeIn("slow")
+			  }
+					  });
+		    $(this).click(function(){
+		      $("html, body").animate({scrollTop:0},"slow")
+		    })
+		  }
+		});
+		$(function() {
+			$("#go-up").scrollToTop();
+	});
+		</script>
 	</body>
 </html>

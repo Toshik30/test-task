@@ -24,6 +24,21 @@ li {
 span {
 	margin-bottom: 30px;
 }
+.go-up {
+		background-color: orangered;
+		border-radius: 50%;
+		border-style: none;
+		bottom: 10%;
+		right: 10%;
+		position: fixed;
+		width: 80px;
+		height: 80px;
+
+		&:focus {
+			outline: none;
+		}
+
+	}
 @import "layouts/header";
 @import "layouts/home-page";
 @import "layouts/footer";
