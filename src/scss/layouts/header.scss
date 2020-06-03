@@ -1,0 +1,17 @@
+.header {
+	.nav {
+		font-weight: 600;
+		a {
+			text-transform: uppercase;
+			margin-left: 2rem;
+
+			&:hover {
+				content: '';
+				color: $primary;
+			}
+		}
+	}
+	img {
+		max-width: 50px;
+	}
+}

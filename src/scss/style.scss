@@ -1,0 +1,33 @@
+@import "base/normalize";
+@import "base/fonts";
+@import "base/variables";
+@import "base/mixins";
+
+* {
+	box-sizing: border-box;
+	background: transparent;
+}
+
+section {
+	padding: 2em 0;
+}
+h1 {
+	font-size: 3em;
+}
+li {
+	cursor: pointer;
+}
+.btn-primary {
+	background-color: $primary;
+	border-color: $primary;
+}
+span {
+	margin-bottom: 30px;
+}
+@import "layouts/header";
+@import "layouts/home-page";
+@import "layouts/footer";
+
+
+
+
