@@ -25,14 +25,13 @@ span {
 	margin-bottom: 30px;
 }
 .go-up {
-		background-color: orangered;
-		border-radius: 50%;
+		background: url(../images/icons/upload.png) 100% 100% no-repeat;
 		border-style: none;
 		bottom: 10%;
 		right: 10%;
 		position: fixed;
-		width: 80px;
-		height: 80px;
+		width: 64px;
+		height: 64px;
 
 		&:focus {
 			outline: none;
@@ -42,6 +41,8 @@ span {
 @import "layouts/header";
 @import "layouts/home-page";
 @import "layouts/footer";
+@import "layouts/lessons";
+@import "layouts/contacts";
 
 
 

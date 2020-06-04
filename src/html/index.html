@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta itemprop="inLanguage" content="ru" charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,9 +8,9 @@
 	</head>
 	<body>
 		<%= _.template(require('./includes/header.html').default)(data) %>
-		<%= _.template(require('./includes/home-page.html').default)(data) %>
+		<%= _.template(require('./includes/contacts.html').default)(data) %>
 		<%= _.template(require('./includes/footer.html').default)(data) %>
-		<button class="go-up" id="go-up">1</button>
+		<button class="go-up" id="go-up"></button>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
@@ -37,6 +37,9 @@
 		$(function() {
 			$("#go-up").scrollToTop();
 	});
+		$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+});
 		</script>
 	</body>
 </html>
