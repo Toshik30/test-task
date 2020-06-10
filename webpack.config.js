@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const chokidar = require('chokidar');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin'); 
 
 const config = {
   entry: "./src/js/index.js",
@@ -31,7 +32,8 @@ const config = {
       new TerserPlugin({
         sourceMap: true,
         extractComments: true
-      })
+      }),
+      new UglifyJsPlugin()
     ]
   },
   resolve: {
@@ -106,6 +108,22 @@ const config = {
     new HtmlWebpackPlugin({
       filename: `index.html`,
       template: path.resolve(__dirname, "src/html/index.html"),
+    }),
+    new HtmlWebpackPlugin({  
+      filename: 'lessons.html',
+      template: path.resolve(__dirname, 'src/html/lessons.html'),
+    }),
+     new HtmlWebpackPlugin({  
+      filename: 'blog.html',
+      template: path.resolve(__dirname, 'src/html/blog.html'),
+    }),
+      new HtmlWebpackPlugin({  
+      filename: 'contacts.html',
+      template: path.resolve(__dirname, 'src/html/contacts.html'),
+    }),
+       new HtmlWebpackPlugin({  
+      filename: 'about-us.html',
+      template: path.resolve(__dirname, 'src/html/about-us.html'),
     }),
     new CopyWebpackPlugin([
       {

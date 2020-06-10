@@ -6,6 +6,7 @@
 * {
 	box-sizing: border-box;
 	background: transparent;
+	font-family: open-sans, sans-serif;
 }
 
 section {
@@ -21,9 +22,7 @@ li {
 	background-color: $primary;
 	border-color: $primary;
 }
-span {
-	margin-bottom: 30px;
-}
+
 .go-up {
 		background: url(../images/icons/upload.png) 100% 100% no-repeat;
 		border-style: none;
@@ -37,12 +36,51 @@ span {
 			outline: none;
 		}
 
+}
+@media (min-width: 300px) and (max-width: 699px){
+	h1 {
+		font-size: 2rem;
 	}
+	h2 {
+		font-size: 22px;
+	}
+
+	.chopin-school {
+		width: 100%;
+		margin-top: 100px;
+	}
+	.home-page-chopin {
+		.school {
+			min-width: 100%;
+			margin: auto 0;
+		}
+	}
+	.home-page-content {
+		.procent-statistic {
+			font-size: 15px;
+			margin: 0;
+		}
+	}
+}
+@media (min-width: 700px) and (max-width: 980px) {
+	.chopin-school {
+		width: 100%;
+		margin-top: 100px;
+	}
+}
+@media (min-width: 981px) and (max-width: 1280px) {
+	.chopin-school {
+		width: 100%;
+		margin-top: 100px;
+		text-align: center;
+	}
+}
 @import "layouts/header";
 @import "layouts/home-page";
 @import "layouts/footer";
 @import "layouts/lessons";
 @import "layouts/contacts";
+@import "layouts/about-us";
 
 
 
